@@ -3,7 +3,7 @@ body {
 	
 }
 header {
-	width: 100%;
+	max-width: 1200px;
 	border: 20px solid black;
 	display: flex;
 	flex-direction: column;
@@ -14,22 +14,26 @@ header {
 		border-bottom: 5px solid black;
 		display: flex;
 		flex-direction: row;
+
 	}
 	.a {
 		
 		background-color: rgb(82, 31, 31);
 		width: 20%;
 		margin: 10px;
+		flex-grow: 1;
 	}
 	.b {
 		background-color: rgb(82, 31, 31);
 		width: 60%;
 		margin: 10px;
+		flex-grow: 5;
 	}
 	.c {
 		background-color: rgb(82, 31, 31);
 		width: 20%;
 		margin: 10px;
+		flex-grow: 1;
 	}
 
 
@@ -49,60 +53,81 @@ header {
 	}
 
 .midblock {
-	height: 300px;
-	width: 100%;
+	max-width: 1200px;
+	height: 100px;
 	background-color: rgb(153, 102, 102);
 	border: 20px solid black;
 	margin-top: 20px;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	
 	
 }
 	.izquierda {
-		/*height: 100%;*/
+		
 		width: 50%;
 		background-color: rgb(80, 82, 143);
 		border-right: 5px solid black;
 		display: grid;
+		grid-template-columns: [m1] 10px [m2] auto [m3] 10px [m4] auto [m5] 10px;
+		grid-template-rows: [la0] 10px [la1] 16px [la2] 10px [la3] 16px [la4] 10px [la5] 16px [la6] auto [la7];
+
 		
 	}
 		.grid1 {
-			width: 50%;
+			height: fit-content;
 			background-color: rgb(79, 101, 245);
-			margin: 10px;
+			grid-column: 2 / 2;
+			grid-row: la0 / la1;
 		}
 		.grid2 {
-			width: 50%;
+			height: fit-content;
 			background-color: rgb(79, 101, 245);
-			margin: 10px;
+			grid-column: 4/4
+			
 		}
 		.grid3 {
-			width: 50%;
+			height: fit-content;
 			background-color: rgb(79, 101, 245);
-			margin: 10px;
+			grid-column: 2/2;
+			grid-row: la2 / la3;
+			
 		}
 		.grid4 {
-			width: 50%;
+			height: fit-content;
 			background-color: rgb(79, 101, 245);
-			margin: 10px;
+			grid-column: 4 / 4;
+			grid-row: la2 / la3;
 		}
 		.grid5 {
-			width: 100%;
+			height: fit-content;
 			background-color: rgb(117, 207, 240);
-			margin: auto;
+			grid-column: 2 / 5;
+			grid-row: la4 / la5;
+			
 		}
 	.derecha {
-		height: 100%;
 		width: 50%;
-		background-color: rgb(234, 99, 99);
+		background-color: rgb(203, 39, 39);
 		border-left: 5px solid black;
+		display: flex;
+		flex-direction: column;
+		justify-content: top;
+	}
+	.text1 {
+		background-color: yellow;
+		margin: 16px 10px 0px 10px;
+		
+	}
+	.text2 {
+		background-color: yellow;
+		margin: 10px 10px;
 	}
 
 	footer {
-		height: 50px;
-		width: 100%;
-		background-color: rgb(144, 46, 46);
+		height: 16px;
+		max-width: 1200px;
+		background-color: rgb(233, 237, 25);
 		border: 20px solid black;
 		margin-top: 20px;
 	}
