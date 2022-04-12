@@ -1,16 +1,19 @@
 body {
 	max-width: 1200px;
-		
 }
 header {
 	max-width: 1200px;
+	height: 400px;
 	display: flex;
 	flex-direction: column;
 	font-family: 'Lato', sans-serif;
 	font-size: 900;
+	background-image: url(../img/header02.jpg);
+	background-position: center;
 }
 .arriba {
 	width: 100%;
+	position: relative;
 	background-color: rgba(235, 233, 233, 0.092);
 	display: flex;
 	flex-direction: row;
@@ -22,6 +25,7 @@ header {
 .a img {
 	width: 100px;
 	height: 100px;
+	animation: moverIzquierda 1s ease-in;
 }
 .b {
 	width: 60%;
@@ -60,31 +64,19 @@ a:hover {
 }
 .abajo {
 	width: auto;
+	height: 150px;
 }
 .unico {
-	position: relative;
-	display: inline-block;
-	text-align: center;
-}
-.titulo {
-	position: absolute;
-	top: 60%;
-	left: 50%;
-	width: 75%;
-	transform: translate(-50% , -50%);
 	background-color: rgba(107, 101, 101, 0.098);
-	padding: 200px 10px 200px 10px;
-	margin-left: 20px;
-	margin-right: 20px;
-	font-size: 2em;
-	color: #ee7463;
+	padding-bottom: 125px;
+	margin: 0px 20px 0px 20px ;
 }
-.portal {
-	width: 100%;
-	border-bottom-left-radius: 5%;
-	-webkit-box-shadow: 14px 86px 35px -97px rgba(0,0,0,0.75);
-	-moz-box-shadow: 14px 86px 35px -97px rgba(0,0,0,0.75);
-	box-shadow: 14px 86px 35px -97px rgba(0,0,0,0.75);
+.top {
+	margin-top: 100px;
+	text-align: center;
+	font-size:30px;
+	color: #ee736388;
+	animation: moverTitulo 1s ease-in;
 }
 .midblock {
 	max-width: 1200px;
@@ -252,13 +244,35 @@ footer {
 	.arriba {
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start;
 	}
-	.a image {
-		justify-content: center;
-		margin-left: 50px;
+	.a img {
+		width:50px;
+		height:50px;
+		
 	}
-	.b, .c {
+	
+	.b {
+		width: 100%	;
+		height: 50px;
+
+	}
+	.ul {
+		margin-top: 0px;
+	}
+	.c {
 		width: auto;
+		margin-left: 40%;
+		margin-top: 40px;
+	}
+	.top {
+		margin-top: 0px;
+	}
+	.unico {
+		padding-bottom: 45px;
+	}
+	.izquierda {
+		padding: 0px; 
 	}
 	.titulo {
 		position: absolute;
@@ -289,4 +303,24 @@ footer {
 	footer {
 		margin-top: 150px;
 }
+}
+@keyframes moverIzquierda {
+	0% {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes moverTitulo {
+	0% {
+		opacity: 0;
+		
+	}
+	100% {
+		opacity: 1;
+		
+	}
 }
